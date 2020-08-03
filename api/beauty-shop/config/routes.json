@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/beauty-shops",
+      "handler": "beauty-shop.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/beauty-shops/count",
+      "handler": "beauty-shop.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/beauty-shops/:id",
+      "handler": "beauty-shop.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/beauty-shops",
+      "handler": "beauty-shop.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/beauty-shops/:id",
+      "handler": "beauty-shop.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/beauty-shops/:id",
+      "handler": "beauty-shop.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

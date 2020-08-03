@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "beauty_shops",
+  "info": {
+    "name": "Beauty Shop"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "email",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "beauty_shops"
+    },
+    "work_hours": {
+      "type": "component",
+      "repeatable": true,
+      "component": "operation.hours-of-operation",
+      "required": true
+    }
+  }
+}
